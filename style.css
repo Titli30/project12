@@ -1,0 +1,77 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+}
+.landing {
+  text-align: center;
+  background: linear-gradient(to right, #2ebf91, #8360c3);
+  color: white;
+  padding: 50px 20px;
+}
+.landing h1 {
+  font-size: 2.8rem;
+}
+.landing button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  margin: 20px;
+  background-color: white;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  background: white;
+}
+form {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.left, .right {
+  flex: 1;
+  min-width: 300px;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.cv-preview {
+  background: white;
+  padding: 30px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.cv-preview img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+button {
+  background-color: #2ebf91;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#downloadBtn {
+  display: block;
+  margin: 20px auto;
+  background: #8360c3;
+}
