@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="landing">
+    <h1>Create Your Professional Resume</h1>
+    <p>Build a job-winning resume in minutes with live preview and customizable templates.</p>
+    <button onclick="document.querySelector('.form-section').scrollIntoView({behavior:'smooth'})">Start Building</button>
+    <div class="switchers">
+      <a href="#">Template Switcher</a> |
+      <a href="#">Theme Switcher</a>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <form id="resumeForm">
+      <div class="left">
+        <label>Upload Image: <input type="file" accept="image/*" id="imgUpload"/></label>
+        <label>Full Name: <input type="text" id="name"/></label>
+        <label>Guardian Name: <input type="text" id="guardian"/></label>
+        <label>Phone: <input type="text" id="phone"/></label>
+        <label>Email: <input type="email" id="email"/></label>
+        <label>Address: <input type="text" id="address"/></label>
+        <label>GitHub: <input type="url" id="github"/></label>
+        <label>Skills: <input type="text" id="skills" placeholder="Comma separated"/></label>
+        <label>Languages: <input type="text" id="languages" placeholder="Comma separated"/></label>
+        <label>Hobbies: <input type="text" id="hobbies" placeholder="Comma separated"/></label>
+      </div>
+
+      <div class="right">
+        <label>Profile Summary: <textarea id="summary"></textarea></label>
+
+        <div id="eduContainer">
+          <h3>Education</h3>
+          <div class="edu">
+            <input type="text" placeholder="Degree" class="degree"/>
+            <input type="text" placeholder="Institute" class="institute"/>
+            <input type="text" placeholder="Year" class="year"/>
+            <input type="text" placeholder="Grade" class="grade"/>
+          </div>
+        </div>
+        <button type="button" onclick="addEdu()">+ Add Education</button>
+
+        <div id="expContainer">
+          <h3>Work Experience</h3>
+          <div class="exp">
+            <input type="text" placeholder="Position" class="position"/>
+            <input type="text" placeholder="Company" class="company"/>
+            <textarea placeholder="Details" class="expDetails"></textarea>
+          </div>
+        </div>
+        <button type="button" onclick="addExp()">+ Add Experience</button>
+
+        <div id="projectContainer">
+          <h3>Projects</h3>
+          <div class="project">
+            <input type="text" placeholder="Project Title" class="projTitle"/>
+            <input type="url" placeholder="Project Link" class="projLink"/>
+            <textarea placeholder="Project Description" class="projDesc"></textarea>
+          </div>
+        </div>
+        <button type="button" onclick="addProject()">+ Add Project</button>
+
+        <button type="button" onclick="generateCV()">Generate Resume</button>
+      </div>
+    </form>
+  </section>
+
+  <section id="cvPreview" class="cv-preview"></section>
+
+  <button id="downloadBtn" onclick="downloadPDF()">Download PDF</button>
+
+  <!-- PDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
